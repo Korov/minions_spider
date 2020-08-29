@@ -29,7 +29,7 @@ def get_hero_weapon(headers):
     return weapon_info_dict
 
 
-if __name__ == '__main__':
+def hero_spider():
     headers = {'Accept-Charset': 'UTF-8',
                'Accept-Encoding': 'gzip,deflate',
                'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 6.0.1; MI 5 MIUI/V8.1.6.0.MAACNDI)',
