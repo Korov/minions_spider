@@ -1,4 +1,3 @@
-from kafka import TopicPartition
 from kafka import KafkaConsumer
 
 consumer = KafkaConsumer('heros',bootstrap_servers='localhost:9092')
