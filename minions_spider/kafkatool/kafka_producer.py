@@ -1,9 +1,10 @@
 from kafka import KafkaProducer
+from scrapy.utils.project import get_project_settings
 
+settings = get_project_settings()
 producer = KafkaProducer(
-    bootstrap_servers='localhost:9092'
+    bootstrap_servers = settings.get('BOOTSTRAP_SERVERS')
 )
-
 
 def on_send_success(*args, **kwargs):
     """

@@ -1,6 +1,8 @@
 from kafka import KafkaConsumer
+from scrapy.utils.project import get_project_settings
 
-consumer = KafkaConsumer('heros', bootstrap_servers='localhost:9092')
+settings = get_project_settings()
+consumer = KafkaConsumer('heros', bootstrap_servers=settings.get('BOOTSTRAP_SERVERS'))
 
 
 def consumer_msg(topic, server):
